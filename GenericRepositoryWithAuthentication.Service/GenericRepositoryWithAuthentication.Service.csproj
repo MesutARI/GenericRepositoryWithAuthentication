@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="Generated\_GeneratedServices.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>_GeneratedServices.tt</DependentUpon>
+    </None>
+    <None Include="Generated\_GeneratedUnitOfWork.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>_GeneratedUnitOfWork.tt</DependentUpon>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GenericRepositoryWithAuthentication.Core\GenericRepositoryWithAuthentication.Core.csproj" />
+    <ProjectReference Include="..\GenericRepositoryWithAuthentication.Data\GenericRepositoryWithAuthentication.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Generated\_GeneratedServices.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>_GeneratedServices.cs</LastGenOutput>
+    </None>
+    <None Update="Generated\_GeneratedUnitOfWork.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>_GeneratedUnitOfWork.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Generated\_GeneratedServices.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>_GeneratedServices.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Generated\_GeneratedUnitOfWork.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>_GeneratedUnitOfWork.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+</Project>
